@@ -1,5 +1,10 @@
 import { useEffect } from 'react';
-import { catapult } from '../../assets/js/catapult.js';
+import cx from 'classnames'
+
+import layout from 'styles/layout.module.scss'
+import global from 'styles/global.module.scss'
+
+import { catapult } from 'modules/catapult.js';
 
 export default (props) => {
 

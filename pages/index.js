@@ -1,9 +1,9 @@
 import {useState, useEffect, useRef} from 'react'
 import cx from 'classnames'
-import Header from 'sections/header/basic.js'
-
-import layout from 'styles/layout.module.scss'
-import global from 'styles/global.module.scss'
+import Header from 'sections/header'
+import Top from 'sections/top'
+import Middle from 'sections/middle'
+import Bottom from 'sections/bottom'
 
 export default () => {
   const [width, setWidth] = useState(0)
@@ -14,13 +14,12 @@ export default () => {
     return () => window.removeEventListener('resize', w)
 	}, [width])
 	
-
   return (
     <>
-      <Header />
-      <Top />
-      <Middle />
-      <Bottom />
+      <Header width={width} />
+      <Top width={width} />
+      <Middle width={width} />
+      <Bottom width={width} />
     </>
   )
 }

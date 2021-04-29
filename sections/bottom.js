@@ -1,6 +1,11 @@
-import React, { useEffect } from 'react';
-import { animateLI } from '../../assets/js/listItem.js';
-import Card from '../../components/card.js';
+import { useEffect } from 'react';
+import cx from 'classnames'
+
+import { animateLI } from 'modules/list-item.js';
+import Card from 'components/card';
+
+import layout from 'styles/layout.module.scss'
+import global from 'styles/global.module.scss'
 
 export default (props) => {
 
@@ -9,7 +14,7 @@ export default (props) => {
 	})
 	
 	return (
-		<section className="background-dotsLI p-5" id="list-dot-outer">
+		<section className={global.animated_bottom} id="list-dot-outer">
 			<div className="container" id="list-dot-start">
 				<div className="d-flex flex-column flex-sm-row flex-nowrap justify-content-start align-items-stretch" >
 					<div className='col-2 image'>
@@ -20,13 +25,13 @@ export default (props) => {
 							<div className="animated-dot mv-3"></div>
 						</div>
 					</div>
-					<div className="col-10 ml-4 pt-5 text-left">
-						<h2 className="">
+					<div className={cx(layout.block_10, layout.text_left)}>
+						<h2>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere.
 							</h2>
 					</div>
 				</div>
-				<div className="d-flex flex-column flex-wrap flex-lg-nowrap justify-content-center align-items-end workflow landing" id="list-stage">
+				<div className={cx(layout.f_col, layout.justify_center, layout.align_end)} id="list-stage">
 					<div className="throbber mid-throbber">
 						<div className="throbber-inner pulse2"></div>
 					</div>

@@ -1,4 +1,4 @@
-import anime from '../anime/lib/anime.es.js';
+import anime from 'animejs';
 
 
       export let firstAnimation = () =>{

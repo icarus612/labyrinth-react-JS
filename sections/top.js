@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import anime from '../../assets/anime/lib/anime.es.js';
-import { firstAnimation } from '../../assets/js/firstAnimation.js';
+import anime from 'animejs';
+import { firstAnimation } from 'modules/first-animation.js';
 
 const Top = (props) => {
 	useEffect(()=> {
