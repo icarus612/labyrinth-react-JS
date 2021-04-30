@@ -7,7 +7,7 @@ body {
   font-family: $sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: $white;
-  color: $white;
+  color: $black;
 }
 
 h1,
@@ -165,14 +165,6 @@ a {
   box-shadow: 1px 2px 8px -2px rgba(50,50,50,.5);
 }
 
-.animated_bottom {
-  background-color: #eee;
-  color: #111;
-}
-
-
-
-
 .step3{
     text-align: center;
     transition: all 0.25s;
@@ -198,72 +190,6 @@ a {
     box-shadow: 1px 2px 10px -2px rgba(50,50,50,.5);
 
   }
-
-
-.step{
-    margin: 12px;
-    padding-left: 30px !important;
-    flex-basis: 100%;
-    box-shadow: 1px 2px 8px -2px rgba(50,50,50,.5);
-    border-left: 1px solid rgb(175, 70, 211);
-
-}
-.description {
-    text-align: left;
-}
-.animated-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color:  rgba(175, 70, 211, 1);
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    z-index: -1
-
-}
-.animated-dot2 {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color:  rgba(175, 70, 211, 1);
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    z-index: -1
-}
-.step{
-    flex: 1 0 200px;
-    text-align: center;
-    transition: all 0.25s;
-    position: relative;
-    padding: 0.5em;
-}
-
-
-.workflow{
-    position: relative;
-}
-h1,  a {
-  font-family: 'Indie Flower', cursive;
-	font-weight: 600;
-}
-h2, h3, h4, h5, h6, p, button {
-  font-family: 'Quicksand', sans-serif;
-}
-.indi {
-  font-family: 'Indie Flower', cursive !important;
-}
-code {
-  text-align: left;
-  padding: 10px;
-  margin: auto;
-  color: white !important;
-}
-.white {
-  color: rgba(255, 255, 255, 1.5) !important;
-}
-
 
 
 .mv1 {
@@ -308,26 +234,8 @@ code {
     transform-style: inital;
   }
 }
-.parallaxHeader {
-  overflow: hidden !important;
-}
-
-.white {
-  color: white;
-}
-
-.softDark{
-  color: rgb(105,105,105);
-}
-
-.dark{
-  color: rgb(90,90,90) !important;
-}
-
-#parallaxHeader {
-  margin-top: 23% !important;
-}
 
 .dot > circle {
   fill: rgba(175, 70, 211, .9);
 }
+

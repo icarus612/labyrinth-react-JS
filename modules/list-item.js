@@ -1,27 +1,27 @@
 import anime from 'animejs';
 
-export let animateLI = () =>{
-  let top = document.querySelector(".top-throbber").getBoundingClientRect(),
-      start = document.querySelector(".mid-throbber").getBoundingClientRect(),
-      end1 = document.querySelector(".pulse3").getBoundingClientRect(),
-      end2= document.querySelector(".pulse4").getBoundingClientRect(),
-      end3 = document.querySelector(".pulse5").getBoundingClientRect(),
+export let animateLI = ({dot, topThrobber, midThrobber}) =>{
+  let top = document.querySelector(`.${topThrobber}`).getBoundingClientRect(),
+      start = document.querySelector(`.${midThrobber}`).getBoundingClientRect(),
+      end1 = document.querySelector(`.${li1}`).getBoundingClientRect(),
+      end2= document.querySelector(`.${li2}`).getBoundingClientRect(),
+      end3 = document.querySelector(`.${li3}`).getBoundingClientRect(),
       endY = (s, e, p=0) =>  (e.top + e.bottom)/2 - (s.top + s.bottom)/2 +p,
       endX = (s, e, p=0) =>  (e.left + e.right)/2 - (s.left + s.right)/2 +p,
       steps = [];
     let animation = anime.timeline({
         easing: "easeInOutCubic",
         complete: function(anim) {
-            animateLI()
+            animateLI({dot, topThrobber, midThrobber})
         }
     }).add({
-        targets: ".animated-dot",
+        targets: `.${dot}`,
         translateY: [0, endY(top, start)],
         translateX: [2, 2],
         duration: 1000,
         easing: "easeOutCubic",
     }, 887).add({
-      targets: ".pulse2",
+      targets: `.${listStart}`,
       opacity: [1, 0],
       scale: [
         {value: [1, 2]},

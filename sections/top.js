@@ -1,5 +1,8 @@
-import React, { useEffect } from 'react';
-import anime from 'animejs';
+import { useEffect } from 'react'
+import cx from 'classnames'
+import anime from 'animejs'
+import layout from 'styles/layout.module.scss'
+import global from 'styles/global.module.scss'
 import { firstAnimation } from 'modules/first-animation.js';
 
 const Top = (props) => {
@@ -17,39 +20,37 @@ const Top = (props) => {
   });
 	
 	return (
-		<section className=" position-relative overflow-visible pt-5" id='top'>
-			<div className="container" id="top-container">
-				<div className="d-flex flex-wrap flex-row">
-					<div className="col-5 py-md-3 text-center text-white my-4">
-						<div className="top-box d-flex flex-column p-5 text-center overflow-visible">
-							<h1 className="dark qHeader">
-								Quest: A Creative Landing Page Theme For Easy Use
-							</h1>
-							<h3 className="dark qHeader">
-								TL;DR: Scroll through to see some cool interactive and reactive Javascript.
-							</h3>
-							<h5 className="dark qHeader2">
-								A Project Icarus Design
-							</h5>
-						</div>
-						<div className="throbber first-throbber">
-							<div className="animated-dot2 mv-6"></div>
-							<div className="throbber-inner"></div>
-						</div>
+		<div className={global.content_top}>
+			<div className={layout.container} id="top-container">
+				<div className={cx(layout.block_5)}>
+					<div>
+						<h1>
+							Quest: A Creative Landing Page Theme For Easy Use
+						</h1>
+						<h3>
+							TL;DR: Scroll through to see some cool interactive and reactive Javascript.
+						</h3>
+						<h5>
+							A Project Icarus Design
+						</h5>
 					</div>
-					<div className="col-5 py-md-3 text-center text-white my-4"></div>
-					<div className="col-1 py-md-3 text-center text-white my-4" id="whereAmI">
-						<div className="throbber second-throbber">
-							<div className="throbber-inner pulse6"></div>
-						</div>
-					</div>
-					<div className="col-10 py-md-3 text-center text-white my-4"></div>
-					<div className="col-1 py-md-3 text-center text-white my-4">
-						<div className="spring"></div>
+					<div className="throbber first-throbber">
+						<div className="animated-dot2 mv-6"></div>
+						<div className="throbber-inner"></div>
 					</div>
 				</div>
+				<div className={cx(layout.block_5, layout.text_center)}></div>
+				<div className={cx(layout.block_1)} id="whereAmI">
+					<div className="throbber second-throbber">
+						<div className="throbber-inner pulse6"></div>
+					</div>
+				</div>
+				<div className={cx(layout.block_10, layout.text_center)}></div>
+				<div className={cx(layout.block_1)}>
+					<div className="spring"></div>
+				</div>
 			</div>
-		</section>
+		</div>
 	)
 }
 export default Top;

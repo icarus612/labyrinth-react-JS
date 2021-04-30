@@ -10,54 +10,61 @@ import global from 'styles/global.module.scss'
 export default (props) => {
 
 	useEffect(() => {
-		animateLI();
+		animateLI({
+			dot: global.animated_dot,
+			topThrobber: global.top_throbber,
+			midThrobber: global.mid_throbber,
+			listStart: global.pulsar2,
+			li1: global.pulsar3,
+			li2: global.pulsar4,
+			li3: global.pulsar5
+		});
 	})
 	
 	return (
-		<section className={global.animated_bottom} id="list-dot-outer">
-			<div className="container" id="list-dot-start">
-				<div className="d-flex flex-column flex-sm-row flex-nowrap justify-content-start align-items-stretch" >
-					<div className='col-2 image'>
-						<div className="throbber top-throbber">
-							<div className="throbber-inner pulse1"></div>
-							<div className="animated-dot mv-1"></div>
-							<div className="animated-dot mv-2"></div>
-							<div className="animated-dot mv-3"></div>
-						</div>
-					</div>
-					<div className={cx(layout.block_10, layout.text_left)}>
-						<h2>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere.
-							</h2>
+		<div className={cx(global.content_bottom, layout.container)}>
+			<div className={cx(layout.f_row, layout.justify_center, layout.align_end, global.position_relative)}>
+				<div className={cx(layout.block_2)}>
+				<div className={cx(global.throbber, global.top_throbber)}>
+						<div className={cx(global.throbber_inner)}></div>
+						<div className={cx(global.animated_dot, "mv-1")}></div>
+						<div className={cx(global.animated_dot, "mv-2")}></div>
+						<div className={cx(global.animated_dot, "mv-3")}></div>
 					</div>
 				</div>
-				<div className={cx(layout.f_col, layout.justify_center, layout.align_end)} id="list-stage">
-					<div className="throbber mid-throbber">
-						<div className="throbber-inner pulse2"></div>
-					</div>
-					<Card
-						title="Speed"
-						description="
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.    
-						"
-						pulsar="throbber-inner pulse3"
-					/>
-					<Card
-						title="Depth"
-						description="
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.    
-						"
-						pulsar="throbber-inner pulse4"
-					/>
-					<Card
-						title="Functionality"
-						description="
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.    
-						"
-						pulsar="throbber-inner pulse5"
-					/>
+				<div className={cx(layout.block_10, layout.text_left)}>
+					<h2>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere.
+					</h2>
 				</div>
 			</div>
-		</section>
+			
+			<div className={cx(layout.f_col, layout.justify_center, layout.align_end, global.position_relative)}>
+				<div className={cx(global.throbber, global.mid_throbber)}>
+					<div className={cx(global.throbber_inner, global.pulsar2)}></div>
+				</div>
+				<Card
+					title="Speed"
+					description="
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.    
+					"
+					pulsar={cx(global.throbber_inner, global.pulsar3)}
+				/>
+				<Card
+					title="Depth"
+					description="
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.    
+					"
+					pulsar={cx(global.throbber_inner, global.pulsar4)}
+				/>
+				<Card
+					title="Functionality"
+					description="
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.    
+					"
+					pulsar={cx(global.throbber_inner, global.pulsar5)}
+				/>
+			</div>	
+		</div>
 	)
 }

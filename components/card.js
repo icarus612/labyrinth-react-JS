@@ -11,7 +11,7 @@ export default(props) => {
   } = props
   return (
     <div className={cx(global.card, layout.block_7)}>
-      <div className="throbber">
+      <div className={global.throbber}>
         <div className={pulsar}></div>
       </div>
       <div>
