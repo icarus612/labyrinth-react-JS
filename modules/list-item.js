@@ -1,6 +1,6 @@
 import anime from 'animejs';
 
-export let animateLI = ({dot, topThrobber, midThrobber}) =>{
+export let animateLI = ({dot, topThrobber, midThrobber, li1, li2, li3}) =>{
   let top = document.querySelector(`.${topThrobber}`).getBoundingClientRect(),
       start = document.querySelector(`.${midThrobber}`).getBoundingClientRect(),
       end1 = document.querySelector(`.${li1}`).getBoundingClientRect(),

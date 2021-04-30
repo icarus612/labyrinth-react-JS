@@ -10,9 +10,9 @@ export default (props) => {
 
 	useEffect(() => {
 		catapult({
-			s: global.start,
-			m: global.middle,
-			e: global.pulsar1,
+			s: global.step3,
+			m: global.step4,
+			e: global.pulsar5,
 			w: global.wall,
 			p: global.path,
 			catapult: global.catapult
@@ -21,7 +21,7 @@ export default (props) => {
 
 	return (
 		<section className={cx(global.content_middle)} id="dot-outer">
-			<div className={layout.container} id="dot-start">
+			<div className={layout.container}>
 				<div className={cx(layout.f_col, layout.justify_center, layout.align_end)}>
 					<div className={layout.block_4}>
 					</div>

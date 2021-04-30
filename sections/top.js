@@ -22,7 +22,7 @@ const Top = (props) => {
 			_spring: global.spring,
 			_catapult: global.catapult_throbber,
 			_top: global.content_top,
-			_step: global.step2,
+			_step: global.wall,
 		});
 	});
 
@@ -35,7 +35,7 @@ const Top = (props) => {
 						</h1>
 					<h3>
 						TL;DR: Scroll through to see some cool interactive and reactive Javascript.
-						</h3>
+					</h3>
 					<h5>
 						A Project Icarus Design
 						</h5>
@@ -46,7 +46,7 @@ const Top = (props) => {
 				</div>
 			</div>
 			<div className={cx(layout.block_5, layout.text_center)}></div>
-			<div className={cx(layout.block_1)} id="whereAmI">
+			<div className={cx(layout.block_1)}>
 				<div className={cx(global.throbber, global.second_throbber)}>
 					<div className={cx(global.throbber_inner, global.pulser6)}></div>
 				</div>
