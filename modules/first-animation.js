@@ -1,13 +1,13 @@
 import anime from 'animejs';
 
 
-export let firstAnimation = () => {
-  let second = document.querySelector(".second-throbber").getBoundingClientRect(),
-    start = document.querySelector(".first-throbber").getBoundingClientRect(),
-    spring = document.querySelector(".spring").getBoundingClientRect(),
-    catapult = document.querySelector(".catapult-throbber").getBoundingClientRect(),
-    top = document.querySelector("#top-container").getBoundingClientRect(),
-    step = document.querySelector(".step2").getBoundingClientRect(),
+export let firstAnimation = ({_second, _start, _spring, _catapult, _top, _step,}) => {
+  let second = document.querySelector(`.${_second}`).getBoundingClientRect(),
+    start = document.querySelector(`.${_start}`).getBoundingClientRect(),
+    spring = document.querySelector(`.${_spring}`).getBoundingClientRect(),
+    catapult = document.querySelector(`.${_catapult}`).getBoundingClientRect(),
+    top = document.querySelector(`.${_top}`).getBoundingClientRect(),
+    step = document.querySelector(`.${_step}`).getBoundingClientRect(),
     endY = (s, e, p = 0) => (e.top + e.bottom) / 2 - (s.top + s.bottom) / 2 + p,
     endX = (s, e, p = 0) => (e.left + e.right) / 2 - (s.left + s.right) / 2 + p;
 

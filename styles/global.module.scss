@@ -222,6 +222,17 @@
   left: 50% !important;
 }
 
+.spring{
+  position: absolute;
+  border-bottom: 2px solid rgba(175, 70, 211, 1);
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 60px !important;
+  position: absolute;
+  transform: rotateZ(-40deg);
+
+}
 
 .top_box {
   background-color: rgba(255,255,255,.8) !important;
@@ -233,6 +244,10 @@
 .pulsar2,
 .pulsar3,
 .pulsar4,
-.pulsar5 {
+.pulsar5,
+.start,
+.middle,
+.wall,
+.path {
   position: relative;
 }

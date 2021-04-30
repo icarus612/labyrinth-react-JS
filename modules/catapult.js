@@ -1,12 +1,12 @@
 import anime from 'animejs';
 
 
-export let catapult = () => {
-  let start = document.querySelector(".pulse8").getBoundingClientRect()
-  let middle = document.querySelector(".pulse7").getBoundingClientRect()
-  let end = document.querySelector(".pulse1").getBoundingClientRect()
-  let wall = document.querySelector(".step4").getBoundingClientRect()
-  let path = document.querySelector("#pathWidth").getBoundingClientRect()
+export let catapult = ({s, m, e, w, p, catapult}) => {
+  let start = document.querySelector(`.${s}`).getBoundingClientRect()
+  let middle = document.querySelector(`.${m}`).getBoundingClientRect()
+  let end = document.querySelector(`.${e}`).getBoundingClientRect()
+  let wall = document.querySelector(`.${w}`).getBoundingClientRect()
+  let path = document.querySelector(`.${p}`).getBoundingClientRect()
   let firstX = (e = 0) => middle.left - start.left + e;
   let firstY = (e = 0) => middle.top - start.top + e;
   let secondX = (e = 0) => (end.right + end.left) / 2 - (start.right + start.left) / 2 + e;
@@ -44,7 +44,7 @@ export let catapult = () => {
       duration: 1
     }
   }).add({
-    targets: ".catapult",
+    targets: `.{catapult}`,
     width: [0, "40px"],
     easing: 'linear',
     duration: 1000,
