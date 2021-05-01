@@ -30,7 +30,7 @@ const Top = (props) => {
 
 	return (
 		<div className={cx(global.content_top, layout.container, layout.f_row, layout.f_wrap)}>
-			<div className={cx(layout.block_5, global.position_relative, global.top_box, layout.text_center)}>
+			<div className={cx(layout.block_4, global.position_relative, global.top_box, layout.text_center)}>
 				<h1>
 					Quest: A Creative Landing Page Theme For Easy Use
 				</h1>
@@ -45,7 +45,7 @@ const Top = (props) => {
 					<div className={cx(global.throbber_inner)}></div>
 				</div>
 			</div>
-			<div className={cx(layout.block_5)} />
+			<div className={cx(layout.block_6)} />
 			<div className={cx(layout.block_1, global.position_relative)}>
 				<div className={cx(global.throbber, global.second_throbber)}>
 					<div className={cx(global.throbber_inner, global.pulsar6)}></div>
