@@ -15,17 +15,17 @@
 
 .content_bottom {
   position: relative;
-
-  .throbber {
-    top: 50%;
-    left: -8px;
+  .card {
+    .throbber {
+      top: 50%;
+      left: -8px;
+    }
   }
 }
 
 .position_relative {
   position: relative;
 }
-
 
 .thin {
   font-weight: 300;
@@ -123,6 +123,9 @@
   flex-basis: 100%;
   box-shadow: 1px 2px 8px -2px rgba(50,50,50,.5);
   border-left: 1px solid rgb(175, 70, 211);
+  flex: 1 0 200px;
+  position: relative;
+  padding: 0.5em;
 }
 
 .dot {
@@ -145,7 +148,7 @@
   z-index: -1
 }
 
-.animated_dot_2 {
+.animated_dot2 {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -185,12 +188,16 @@
 
 .first_throbber {
   top: 50%;
-  right: 9px;
+  right: -7px;
 }
 
 .top_throbber {
   top: 55%;
   left: 68px;
+}
+
+.hidden_block {
+  height: 100px;
 }
 
 .second_throbber {
@@ -236,8 +243,35 @@
 
 .top_box {
   background-color: rgba(255,255,255,.8) !important;
-  padding: 5px;
+  padding: 20px;
   box-shadow: 1px 2px 8px -2px rgba(50,50,50,.5);
+}
+
+.step3 {
+  text-align: center;
+  transition: all 0.25s;
+  position: relative;
+  padding: 0.5em;
+  height: 120px !important;
+
+}
+
+.step4 {
+  text-align: center;
+  transition: all 0.25s;
+  position: relative;
+  padding: 0.5em;
+  height: 280px !important;
+  border-left: 2px solid rgb(175, 70, 211);
+}
+
+.step2 {
+  text-align: center;
+  transition: all 0.25s;
+  position: relative;
+  padding: 0.5em;
+  margin-right: 100px;
+  box-shadow: 1px 2px 10px -2px rgba(50,50,50,.5);
 }
 
 .pulsar1,
@@ -245,12 +279,27 @@
 .pulsar3,
 .pulsar4,
 .pulsar5,
+.pulsar6,
+.pulsar7,
+.pulsar8,
 .start,
 .middle,
 .wall,
-.path,
+.path_top,
+.path_bottom,
 .step5,
 .step4,
-.step3 {
-  position: relative;
+.step3,
+.mv_1,
+.mv_2,
+.mv_3,
+.mv_4,
+.mv_5,
+.mv_6 {
+  visibility: visible;
+}
+
+.wall2 {
+  background-color: $secondary;
+  height: 200px;
 }

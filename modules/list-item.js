@@ -1,6 +1,6 @@
 import anime from 'animejs';
 
-export let animateLI = ({dot, topThrobber, midThrobber, li1, li2, li3}) =>{
+export let animateLI = ({dot, topThrobber, midThrobber, listStart, li1, li2, li3, mv1, mv2, mv3}) =>{
   let top = document.querySelector(`.${topThrobber}`).getBoundingClientRect(),
       start = document.querySelector(`.${midThrobber}`).getBoundingClientRect(),
       end1 = document.querySelector(`.${li1}`).getBoundingClientRect(),
@@ -12,7 +12,7 @@ export let animateLI = ({dot, topThrobber, midThrobber, li1, li2, li3}) =>{
     let animation = anime.timeline({
         easing: "easeInOutCubic",
         complete: function(anim) {
-            animateLI({dot, topThrobber, midThrobber})
+            animateLI({dot, topThrobber, midThrobber, listStart, li1, li2, li3, mv1, mv2, mv3})
         }
     }).add({
         targets: `.${dot}`,
@@ -29,18 +29,18 @@ export let animateLI = ({dot, topThrobber, midThrobber, li1, li2, li3}) =>{
       easing: "easeOutCubic",
       duration: 1000,
     }).add({
-        targets: ".mv-1",
+        targets: `.${mv1}`,
         translateX: [0, endX(start, end1)],
         translateY: [endY(top, start), endY(top, end1)],
         duration: 600,
         easing: "easeOutCubic"
     }).add({
-        targets: ".mv-1",
+        targets: `.${mv1}`,
         opacity: [1, 0],
         duration: 1,
         easing: "linear"
     }).add({
-        targets: ".pulse3",
+        targets: `.${li1}`,
         opacity: [1, 0],
         scale: [
             {value: [1, 2]},
@@ -48,7 +48,7 @@ export let animateLI = ({dot, topThrobber, midThrobber, li1, li2, li3}) =>{
         easing: "easeOutCubic",
         duration: 1000,
     }).add({
-        targets: ".mv-3",
+        targets: `.${mv3}`,
         translateY: [
             {value: [endY(top, start),  endY(top, end1, -20)]},
             {value: [endY(top, end1, -20),  endY(top, end3, 20)]},
@@ -61,12 +61,12 @@ export let animateLI = ({dot, topThrobber, midThrobber, li1, li2, li3}) =>{
         duration: 1300,
         delay: 100
     }).add({
-        targets: ".mv-3",
+        targets: `.${mv3}`,
         opacity: [1, 0],
         duration: 1,
         easing: "linear"
     }).add({
-        targets: ".pulse4",
+        targets: `.${li2}`,
         opacity: [1, 0],
         scale: [
             {value: [1, 2]},
@@ -74,7 +74,7 @@ export let animateLI = ({dot, topThrobber, midThrobber, li1, li2, li3}) =>{
         easing: "easeOutCubic",
         duration: 1000,
     }).add({
-        targets: ".mv-2",
+        targets: `.${mv2}`,
         translateX: [
             {
                 value: [0, endX(start, end3)/3],
@@ -134,12 +134,12 @@ export let animateLI = ({dot, topThrobber, midThrobber, li1, li2, li3}) =>{
         },
 
     }).add({
-        targets: ".mv-2",
+        targets: `.${mv2}`,
         opacity: [1, 0],
         duration: 1,
         easing: "linear"
     }).add({
-        targets: ".pulse5",
+        targets: `.${li3}`,
         opacity: [1, 0],
         scale: [
             {value: [1, 2]},

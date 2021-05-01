@@ -1,7 +1,6 @@
 import anime from 'animejs';
 
-
-export let firstAnimation = ({_second, _start, _spring, _catapult, _top, _step,}) => {
+export let firstAnimation = ({_second, _start, _spring, _catapult, _top, _step, mv_6, pulsar}) => {
   let second = document.querySelector(`.${_second}`).getBoundingClientRect(),
     start = document.querySelector(`.${_start}`).getBoundingClientRect(),
     spring = document.querySelector(`.${_spring}`).getBoundingClientRect(),
@@ -14,16 +13,16 @@ export let firstAnimation = ({_second, _start, _spring, _catapult, _top, _step,}
   let animation = anime.timeline({
     easing: "linear",
     complete: function (anim) {
-      firstAnimation()
+      firstAnimation({_second, _start, _spring, _catapult, _top, _step, mv_6, pulsar})
     },
   }).add({
-    targets: ".mv-6",
+    targets: `.${mv_6}`,
     translateX: [0, endX(start, second)],
     translateY: [0, 0],
     duration: 1100,
     delay: 3830,
   }).add({
-    targets: ".pulse6",
+    targets: `.${pulsar}`,
     opacity: [1, 0],
     scale: [
       { value: [1, 2] },
@@ -31,12 +30,12 @@ export let firstAnimation = ({_second, _start, _spring, _catapult, _top, _step,}
     easing: "easeOutCubic",
     duration: 1000,
   }).add({
-    targets: ".mv-6",
+    targets: `.${mv_6}`,
     translateX: [endX(start, second), endX(start, spring)],
     translateY: [0, endY(start, spring, 6)],
     duration: 1300,
   }).add({
-    targets: ".spring",
+    targets: `.${_spring}`,
     borderRadius: [
       { value: [0, "50%"] },
       { value: ["50%", 0] },
@@ -44,7 +43,7 @@ export let firstAnimation = ({_second, _start, _spring, _catapult, _top, _step,}
     duration: 200,
     direction: "alternate"
   }).add({
-    targets: ".mv-6",
+    targets: `.${mv_6}`,
     translateX:
     {
       value: [endX(start, spring), endX(start, spring) / 2],
@@ -66,7 +65,7 @@ export let firstAnimation = ({_second, _start, _spring, _catapult, _top, _step,}
     ],
 
   }).add({
-    targets: ".mv-6",
+    targets: `.${mv_6}`,
     height: [
       {
         value: ["10px", "1px"],

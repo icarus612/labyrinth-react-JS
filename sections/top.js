@@ -8,7 +8,7 @@ import { firstAnimation } from 'modules/first-animation.js';
 const Top = (props) => {
 	useEffect(() => {
 		anime({
-			targets: ".first-throbber .throbber-inner",
+			targets: `.${global.first_throbber} .${global.throbber_inner}`,
 			scale: 1.6,
 			border: "0px",
 			easing: "easeInCubic",
@@ -22,37 +22,38 @@ const Top = (props) => {
 			_spring: global.spring,
 			_catapult: global.catapult_throbber,
 			_top: global.content_top,
-			_step: global.wall,
+			_step: global.path_top,
+			mv_6: global.mv_6,
+			pulsar: global.pulsar6
 		});
 	});
 
 	return (
-		<div className={cx(global.content_top, layout.container)}>
-			<div className={cx(layout.block_5)}>
-				<div>
-					<h1>
-						Quest: A Creative Landing Page Theme For Easy Use
-						</h1>
-					<h3>
-						TL;DR: Scroll through to see some cool interactive and reactive Javascript.
-					</h3>
-					<h5>
-						A Project Icarus Design
-						</h5>
-				</div>
+		<div className={cx(global.content_top, layout.container, layout.f_row, layout.f_wrap)}>
+			<div className={cx(layout.block_5, global.position_relative, global.top_box, layout.text_center)}>
+				<h1>
+					Quest: A Creative Landing Page Theme For Easy Use
+				</h1>
+				<h3>
+					TL;DR: Scroll through to see some cool interactive and reactive Javascript.
+				</h3>
+				<h5>
+					A Project Icarus Design
+				</h5>
 				<div className={cx(global.throbber, global.first_throbber)}>
-					<div className={cx(global.animated_dot2, "mv-6")}></div>
+					<div className={cx(global.animated_dot2, global.mv_6)}></div>
 					<div className={cx(global.throbber_inner)}></div>
 				</div>
 			</div>
-			<div className={cx(layout.block_5, layout.text_center)}></div>
-			<div className={cx(layout.block_1)}>
+			<div className={cx(layout.block_5)} />
+			<div className={cx(layout.block_1, global.position_relative)}>
 				<div className={cx(global.throbber, global.second_throbber)}>
-					<div className={cx(global.throbber_inner, global.pulser6)}></div>
+					<div className={cx(global.throbber_inner, global.pulsar6)}></div>
 				</div>
 			</div>
-			<div className={cx(layout.block_10, layout.text_center)}></div>
-			<div className={cx(layout.block_1)}>
+			<div className={cx(layout.block_10, global.hidden_block)} />
+			<div className={cx(layout.block_10, global.hidden_block)} />
+			<div className={cx(layout.block_1, global.position_relative)}>
 				<div className={global.spring}></div>
 			</div>
 		</div>

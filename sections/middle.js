@@ -10,57 +10,48 @@ export default (props) => {
 
 	useEffect(() => {
 		catapult({
-			s: global.step3,
-			m: global.step4,
-			e: global.pulsar5,
-			w: global.wall,
-			p: global.path,
-			catapult: global.catapult
+			_start: global.pulsar8,
+			_middle: global.pulsar7,
+			_end: global.top_throbber,
+			_wall: global.step4,
+			_path: global.path_bottom,
+			catapultItem: global.catapult,
+			pulse1: global.pulsar1, 
+			mv_5: global.mv_5,
+			catapultThrobber: global.catapult_throbber
 		});
 	})
 
 	return (
-		<section className={cx(global.content_middle)} id="dot-outer">
-			<div className={layout.container}>
-				<div className={cx(layout.f_col, layout.justify_center, layout.align_end)}>
-					<div className={layout.block_4}>
-					</div>
-					<div className={cx(layout.block_8, global.wall)}>
-						<h4>
-							Before we get started this site Isn't necacarilly mobile frindly, but screw off. Its a math puzzle where width is my most important. It all still works it just looks like shit.
-            </h4>
+		<div className={cx(global.content_middle, layout.container, layout.f_col, layout.justify_center, layout.align_end)}>
+			<div className={cx(layout.block_8, global.step2, global.path_top, global.position_relative)}>
+				<h4>
+					Before we get started this site Isn't necacarilly mobile frindly, but screw off. Its a math puzzle where width is my most important. It all still works it just looks like shit.
+				</h4>
+			</div>
+			<div className={cx(layout.f_col, layout.justify_center, layout.align_end, global.position_relative, layout.block_12)}>
+				<div className={cx(global.throbber, global.catapult_throbber)}>
+					<div className={cx(global.throbber_inner, global.pulsar8)}></div>
+					<div className={cx(global.catapult)}></div>
+					<div className={cx(global.animated_dot2, global.mv_5)}></div>
+				</div>
+				<div className={layout.block_3}>
+					<div className={global.step3}></div>
+				</div>
+				<div className={cx(layout.block_5, global.position_relative)}>
+					<div className={cx(global.step4)}>
+						<div className={cx(global.throbber, global.wheel_end_throbber)}>
+							<div className={cx(global.throbber_inner, global.pulsar7)}></div>
+						</div>
 					</div>
 				</div>
-				<div className={cx(layout.f_col, layout.justify_center, layout.align_end)}>
-					<div className={cx(global.throbber, global.catapult_throbber)}>
-						<div className={cx(global.throbber_inner, global.pulsar8)}></div>
-						<div className={cx(global.catapult)}></div>
-						<div className={cx(global.animated_dot2, "mv-5")}></div>
-					</div>
-					<div className={layout.block_3}>
-					<div className={global.step3}>
-						</div>
-					</div>
-					<div className={layout.blcok_5}>
-						<div className={global.step4}>
-							<div className={cx(global.throbber, global.wheel_end_throbber)}>
-								<div className={cx(global.throbber_inner, global.pulser7)}></div>
-							</div>
-						</div>
-					</div>
-					<div className={cx(layout.f_col, layout.justify_center, layout.align_end)}>
-						<div className={cx(layout.block_11, global.path)}>
-							<h4>
-								Debth
-							</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.
-							</p>
-						</div>
+				<div className={cx(layout.f_col, layout.justify_center, layout.align_start, layout.block_12)}>
+					<div className={cx(layout.block_10, global.step2,  global.path_bottom)}>
+						<div className={global.hidden_block} />
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	)
 }
 

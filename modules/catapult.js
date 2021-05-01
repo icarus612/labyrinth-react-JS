@@ -1,12 +1,12 @@
 import anime from 'animejs';
 
 
-export let catapult = ({s, m, e, w, p, catapult}) => {
-  let start = document.querySelector(`.${s}`).getBoundingClientRect()
-  let middle = document.querySelector(`.${m}`).getBoundingClientRect()
-  let end = document.querySelector(`.${e}`).getBoundingClientRect()
-  let wall = document.querySelector(`.${w}`).getBoundingClientRect()
-  let path = document.querySelector(`.${p}`).getBoundingClientRect()
+export let catapult = ({_start, _middle, _end, _wall, _path, catapultItem, catapultThrobber, pulse1, mv_5}) => {
+  let start = document.querySelector(`.${_start}`).getBoundingClientRect()
+  let middle = document.querySelector(`.${_middle}`).getBoundingClientRect()
+  let end = document.querySelector(`.${_end}`).getBoundingClientRect()
+  let wall = document.querySelector(`.${_wall}`).getBoundingClientRect()
+  let path = document.querySelector(`.${_path}`).getBoundingClientRect()
   let firstX = (e = 0) => middle.left - start.left + e;
   let firstY = (e = 0) => middle.top - start.top + e;
   let secondX = (e = 0) => (end.right + end.left) / 2 - (start.right + start.left) / 2 + e;
@@ -18,10 +18,10 @@ export let catapult = ({s, m, e, w, p, catapult}) => {
   let animation = anime.timeline({
     easing: "easeInOutCubic",
     complete: function (anim) {
-      catapult()
+      catapult({_start, _middle, _end, _wall, _path, catapultItem, catapultThrobber, pulse1, mv_5})
     }
   }).add({
-    targets: ".pulse8",
+    targets: `.${_start}`,
     opacity: [1, 0],
     scale: [
       { value: [1, 2] },
@@ -29,7 +29,7 @@ export let catapult = ({s, m, e, w, p, catapult}) => {
     easing: "easeOutCubic",
     duration: 1000,
   }).add({
-    targets: ".mv-5",
+    targets: `.${mv_5}`,
     backgroundColor: {
       value: ["rgba(175, 70, 211, 1)", "rgba(0, 0, 0, 0)"],
       duration: 1
@@ -44,23 +44,23 @@ export let catapult = ({s, m, e, w, p, catapult}) => {
       duration: 1
     }
   }).add({
-    targets: `.{catapult}`,
+    targets: `.${catapultItem}`,
     width: [0, "40px"],
     easing: 'linear',
     duration: 1000,
   }, 1000).add({
-    targets: ".mv-5",
+    targets: `.${mv_5}`,
     translateX: [0, 40],
     translateY: [0, 0],
     easing: 'linear',
     duration: 1000,
   }, 1000).add({
-    targets: ".catapult-throbber",
+    targets: `.${catapultThrobber}`,
     rotateZ: [0, -360],
     easing: 'linear',
     duration: 500,
   }).add({
-    targets: ".mv-5",
+    targets: `.${mv_5}`,
     translateX: [
       {
         value: [40, overWallX(-10)],
@@ -85,7 +85,7 @@ export let catapult = ({s, m, e, w, p, catapult}) => {
     easing: "linear",
     duration: 1000,
   }).add({
-    targets: ".pulse7",
+    targets: `.${_middle}`,
     opacity: [1, 0],
     scale: [
       { value: [1, 2] },
@@ -93,7 +93,7 @@ export let catapult = ({s, m, e, w, p, catapult}) => {
     easing: "easeOutCubic",
     duration: 1000,
   }).add({
-    targets: ".mv-5",
+    targets: `.${mv_5}`,
     translateX: [
       {
         value: [firstX(), aroundSideX(30)],
@@ -121,7 +121,7 @@ export let catapult = ({s, m, e, w, p, catapult}) => {
     ],
     easing: "linear",
   }).add({
-    targets: ".pulse1",
+    targets: `.${pulse1}`,
     opacity: [1, 0],
     scale: [
       { value: [1, 2] },
@@ -129,7 +129,7 @@ export let catapult = ({s, m, e, w, p, catapult}) => {
     easing: "easeOutCubic",
     duration: 1000,
   }).add({
-    targets: ".catapult",
+    targets: `.${catapultItem}`,
     width: ["40px", 0],
     easing: 'linear',
     duration: 1000,
