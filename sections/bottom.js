@@ -15,9 +15,9 @@ export default (props) => {
 			topThrobber: global.top_throbber,
 			midThrobber: global.mid_throbber,
 			listStart: global.pulsar2,
-			li1: global.pulsar3,
-			li2: global.pulsar4,
-			li3: global.pulsar5,
+			li1: global.animated_li1,
+			li2: global.animated_li2,
+			li3: global.animated_li3,
 			mv1: global.mv_1,
 			mv2: global.mv_2,
 			mv3: global.mv_3,
@@ -35,7 +35,7 @@ export default (props) => {
 						<div className={cx(global.animated_dot, global.mv_3)}></div>
 					</div>
 				</div>
-				<div className={cx(layout.block_10, global.card)}>
+				<div className={cx(layout.block_10, global.step2)}>
 					<div className={global.hidden_block} />
 				</div> 
 			</div>
@@ -49,21 +49,21 @@ export default (props) => {
 					description="
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.    
 					"
-					pulsar={cx(global.throbber_inner, global.pulsar3)}
+					pulsar={cx(global.throbber_inner, global.animated_li1)}
 				/>
 				<Card
 					title="Depth"
 					description="
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.    
 					"
-					pulsar={cx(global.throbber_inner, global.pulsar4)}
+					pulsar={cx(global.throbber_inner, global.animated_li2)}
 				/>
 				<Card
 					title="Functionality"
 					description="
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere. Fusce dolor nulla, interdum ultricies quam vitae, sagittis interdum enim. Nulla a nunc enim. Vestibulum mollis sodales tincidunt. Nulla ullamcorper dui quis magna feugiat, vel fringilla libero tristique. Nulla aliquet aliquam nisl, et aliquam nibh lacinia quis.    
 					"
-					pulsar={cx(global.throbber_inner, global.pulsar5)}
+					pulsar={cx(global.throbber_inner, global.animated_li3)}
 				/>
 			</div>
 		</div>

@@ -1,19 +1,19 @@
 import anime from 'animejs';
 
-export let firstAnimation = ({_second, _start, _spring, _catapult, _top, _step, mv_6, pulsar}) => {
-  let second = document.querySelector(`.${_second}`).getBoundingClientRect(),
-    start = document.querySelector(`.${_start}`).getBoundingClientRect(),
+export let firstAnimation = ({ _start, mv_2, _spring, _end, container, bouncePath, mv_6, startPulsar}) => {
+  let start = document.querySelector(`.${_start}`).getBoundingClientRect(),
+    second = document.querySelector(`.${mv_2}`).getBoundingClientRect(),
     spring = document.querySelector(`.${_spring}`).getBoundingClientRect(),
-    catapult = document.querySelector(`.${_catapult}`).getBoundingClientRect(),
-    top = document.querySelector(`.${_top}`).getBoundingClientRect(),
-    step = document.querySelector(`.${_step}`).getBoundingClientRect(),
+    catapult = document.querySelector(`.${_end}`).getBoundingClientRect(),
+    top = document.querySelector(`.${container}`).getBoundingClientRect(),
+    step = document.querySelector(`.${bouncePath}`).getBoundingClientRect(),
     endY = (s, e, p = 0) => (e.top + e.bottom) / 2 - (s.top + s.bottom) / 2 + p,
     endX = (s, e, p = 0) => (e.left + e.right) / 2 - (s.left + s.right) / 2 + p;
 
   let animation = anime.timeline({
     easing: "linear",
     complete: function (anim) {
-      firstAnimation({_second, _start, _spring, _catapult, _top, _step, mv_6, pulsar})
+      firstAnimation({_start, mv_2, _spring, _end, container, bouncePath, mv_6, startPulsar})
     },
   }).add({
     targets: `.${mv_6}`,
@@ -22,7 +22,7 @@ export let firstAnimation = ({_second, _start, _spring, _catapult, _top, _step, 
     duration: 1100,
     delay: 3830,
   }).add({
-    targets: `.${pulsar}`,
+    targets: `.${startPulsar}`,
     opacity: [1, 0],
     scale: [
       { value: [1, 2] },

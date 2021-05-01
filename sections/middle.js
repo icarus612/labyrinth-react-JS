@@ -25,9 +25,7 @@ export default (props) => {
 	return (
 		<div className={cx(global.content_middle, layout.container, layout.f_col, layout.justify_center, layout.align_end)}>
 			<div className={cx(layout.block_8, global.step2, global.path_top, global.position_relative)}>
-				<h4>
-					Before we get started this site Isn't necacarilly mobile frindly, but screw off. Its a math puzzle where width is my most important. It all still works it just looks like shit.
-				</h4>
+				<div className={global.hidden_block} />
 			</div>
 			<div className={cx(layout.f_col, layout.justify_center, layout.align_end, global.position_relative, layout.block_12)}>
 				<div className={cx(global.throbber, global.catapult_throbber)}>

@@ -17,14 +17,14 @@ const Top = (props) => {
 			duration: 1500,
 		});
 		firstAnimation({
-			_second: global.second_throbber,
 			_start: global.first_throbber,
+			_end: global.catapult_throbber,
+			mv_2: global.second_throbber,
 			_spring: global.spring,
-			_catapult: global.catapult_throbber,
-			_top: global.content_top,
-			_step: global.path_top,
+			container: global.content_top,
+			bouncePath: global.path_top,
 			mv_6: global.mv_6,
-			pulsar: global.pulsar6
+			startPulsar: global.pulsar6
 		});
 	});
 
