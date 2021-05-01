@@ -27,6 +27,9 @@ export default (props) => {
 	return (
 		<div className={cx(global.content_bottom, layout.container)}>
 			<div className={cx(layout.f_row, layout.f_wrap, layout.justify_center, layout.align_stretch, global.position_relative)}>
+				<div className={cx(layout.block_12)}>
+					<div className={global.hidden_block} />
+				</div> 
 				<div className={cx(layout.block_2)}>
 					<div className={cx(global.throbber, global.top_throbber)}>
 						<div className={cx(global.throbber_inner, global.pulsar1)} />
