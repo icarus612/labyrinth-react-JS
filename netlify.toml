@@ -2,8 +2,4 @@
 [build]
   functions = "functions"
   publish = ".next"
-  command = "CI= yarn build"
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  command = "yarn build"
